@@ -1,348 +1,129 @@
-
+*{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
 
   body{
         background:  hsl(30, 38%, 92%);
-        font-family: Montserrat;
-        font-size: 11px;
-        
+        font-size: 0.875rem;
+        font-family: sans-serif;
+  }
+
+  :root{
+    --font-family-1: Montserrat;
+    --font-family-2: Fraunces;
+
+    --font-weight-1: 500;
+    --font-weight-2: 700;
+
+    --primary-color-1: hsl(158, 36%, 37%);
+    --primary-color-2: hsl(30, 38%, 92%);
+
+    --Netural-color-1: hsl(212, 21%, 14%);
+    --Netural-color-2: hsl(228, 12%, 48%);
+    --Netural-color-3: hsl(0, 0%, 100%);
 
   }
 
   h1{
-    font-family:Fraunces;
-    font-size: x-large;
+    font-family: var(--font-family-2);
   }
 
+  p{
+    font-family: var(--font-family-1) ;
+    color: hsl(228, 12%, 48%);
+  }
+
+  .Product_container{
+    max-width: 375px ;
+    padding: 20px;
+    margin: 5% auto;
+  }
+
+  .Product_Img{
+    background-image: url(./images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 200px;
+    min-height: 60vh;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .Product_details{
+    padding: 25px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0px 0px 10px 10px ;
+  }
+
+  .Product_details p:nth-child(1){
+    padding: 10px 0px 10px 0px;
+    text-transform: uppercase;
+    
+  }
+
+  .Product_details p:nth-child(3){
+    padding: 20px 0px 20px 0px;
+    line-height: 1.5;
+    word-spacing: 8px;
+  }
+
+  .Product_price {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin-bottom:10px ;
+    
+  }
+  .Product_price p:nth-child(1){
+    color: var(--primary-color-1);
+    font-weight: 700;
+    font-family: var(--font-family-2);
+    font-size: 2rem;
+  }
+
+  .Product_price p+p{
+    text-decoration: line-through
+  }
+ 
+  button{
+    width: 100%;
+    background-color: var(--primary-color-1);
+    border: 1px solid green;
+    color: var(--Netural-color-3);
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
   button:hover{
-    background-color: hsl(158, 31%, 21%) ;
+    background-color: var(--Netural-color-1);
     cursor: pointer;
   }
 
-  .fa-solid{
-    color: aliceblue;
-    padding-right: 5px;
-  }
 
-  
+  @media screen and (min-width: 768px) {
 
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
-
-.perfum{
-    width: 90%;
-    margin: 20px auto;
-    background-color: hsl(0, 0%, 100%);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    
-    
-
-}
-
-h1{
-    font-family:Fraunces;
-    font-size: xx-large;
-  }
-
-.perfumImg{
-    background: url(/images/image-product-mobile.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-size: cover;
-    height: 250px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;   
-}
-
-
-
-.perfumDetails{
-    margin: 20px 0px 3px 20px;
-    padding-right: 25px;
-    font-weight: 500;
-    text-align: left;
-    font-size: larger;
-
-    
-}
-
-.perfumDetails p{
-    color:  hsl(228, 12%, 48%) ;
-
-}
-
-.perfumDetails h1+p{
-    line-height: 1.8;
-}
-
-
-.perfumDetails p:nth-child(1){
-    letter-spacing:5px;
-    text-transform: uppercase;
-}
-
-
-.price p{
-    color: hsl(158, 36%, 37%);
-    display: inline-block;
-}
-
-.perfumDetails .price p:first-child{
-     font-weight: 700;
-     font-family:Fraunces;
-     font-size: xx-large;
-     letter-spacing:0px;
-     text-transform: none;
-     margin-top: 1px;
-     margin-bottom: 10px;
+    .Product_container{
+        display: flex;
+        max-width: 600px ;
       
-}
-
-.price p:last-child{
-    margin: 0px 0px 0px 7px;
-    text-decoration: line-through;
-    color:  hsl(228, 12%, 48%) ;
-    position: relative;
-    bottom: 7px;
-    font-size: small;
-}
-
-
-
-
-
-button{
-    margin: 1% 5%;
-    width: 90%;
-    height: 40px;
-    background:  hsl(158, 36%, 37%);
-    color: hsl(0, 0%, 100%) ;
-    border-radius: 10px;
-    border: none;
-}
-
-
+    }
+    .Product_Img{
+        background-image: url(./images/image-product-desktop.jpg);
+        background-position: center;
+        border-radius: 10px 0px 0px 10px;
+        min-width: 50%;
+        min-height: 40vh;
+    }
+  .Product_details{
+    width: 50%;
+    padding: 40px;
+    border-radius: 0px 10px 10px 0px;
+    
+   
+  }
   
   }
 
-  
 
-
-  @media only screen and (min-width: 769px) and (max-width:1024px){
-
-
-    .perfum{
-        width: 50%;
-        height: 400px;
-        margin: 200px auto;
-        background-color: hsl(0, 0%, 100%);
-        display: grid;
-        grid-template-columns: repeat(2 , 1fr);
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    
-        }
-    
-    .perfumImg{
-        background: url(/images/image-product-desktop.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        grid-column:1/2 ;
-        grid-row: 1/3;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-    }
-    
-  
-    
-    .perfumDetails{
-        grid-column: 2/3;
-        grid-row: 1/2;
-        margin: 20px 20px 3px 20px;
-        padding-right: 30px;
-        font-weight: 500;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
-        
-
-        
-    
-    }
-    
-    .perfumDetails p{
-        color:  hsl(228, 12%, 48%) ;
-    
-    }
-    
-    .perfumDetails h1+p{
-        line-height: 1.8;
-    }
-    
-    
-    .perfumDetails p:nth-child(1){
-        letter-spacing:5px;
-        text-transform: uppercase;
-    }
-    
-    
-    .price p{
-        color: hsl(158, 36%, 37%);
-        display: inline-block;
-    }
-    
-    .perfumDetails .price p:first-child{
-         font-weight: 700;
-         font-family:Fraunces;
-         font-size: x-large;
-         letter-spacing:0px;
-         text-transform: none;
-         margin-top: 10px;
-         margin-bottom: 1px;
-          
-    }
-    
-    .price p:last-child{
-        margin: 0px 0px 0px 7px;
-        text-decoration: line-through;
-        color:  hsl(228, 12%, 48%) ;
-        position: relative;
-        bottom: 7px;
-        font-size: smaller;
-    }
-    
-    
-    
-    
-    
-    button{
-        margin: 1% 5%;
-        width: 90%;
-        height: 40px;
-        background:  hsl(158, 36%, 37%);
-        color: hsl(0, 0%, 100%) ;
-        border-radius: 10px;
-        border: none;
-    }
-    
-    
-
-
-  }
-
-  @media only screen and (min-width: 1025px) and (max-width:1440px){
-
-    .perfum{
-        width: 50%;
-        height: 500px;
-        margin: 200px auto;
-        background-color: hsl(0, 0%, 100%);
-        display: grid;
-        grid-template-columns: repeat(2 , 1fr);
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    
-        }
-
-        h1{
-            font-family:Fraunces;
-            font-size: xx-large;
-          }
-    
-    .perfumImg{
-        background: url(/images/image-product-desktop.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        grid-column:1/2 ;
-        grid-row: 1/3;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-    }
-    
-  
-    
-    .perfumDetails{
-        grid-column: 2/3;
-        grid-row: 1/2;
-        margin: 10px 0px 0px 20px;
-        padding-right: 60px;
-        font-weight: 500;
-        font-size: 16px;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
-        height: 400px;
-
-        
-    
-    }
-    
-    .perfumDetails p{
-        color:  hsl(228, 12%, 48%) ;
-    
-    }
-    
-    .perfumDetails h1+p{
-        line-height: 1.8;
-    }
-    
-    
-    .perfumDetails p:nth-child(1){
-        letter-spacing:5px;
-        text-transform: uppercase;
-    }
-    
-    
-    .price p{
-        color: hsl(158, 36%, 37%);
-        display: inline-block;
-    }
-    
-    .perfumDetails .price p:first-child{
-         font-weight: 700;
-         font-family:Fraunces;
-         font-size: xx-large;
-         letter-spacing:0px;
-         text-transform: none;
-         margin-top: 10px;
-         margin-bottom: 1px;
-          
-    }
-    
-    .price p:last-child{
-        margin: 0px 0px 0px 7px;
-        text-decoration: line-through;
-        color:  hsl(228, 12%, 48%) ;
-        position: relative;
-        bottom: 7px;
-        font-size: small;
-    }
-    
-    
-    
-    
-    
-    button{
-        margin: 1% 5%;
-        width: 90%;
-        height: 40px;
-        background:  hsl(158, 36%, 37%);
-        color: hsl(0, 0%, 100%) ;
-        border-radius: 10px;
-        border: none;
-    }
-    
-    
-
-
-
-
-
-
-
-  }
-
-  
- 
